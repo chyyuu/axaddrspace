@@ -9,7 +9,7 @@ description = "ArceOS-Hypervisor guest address space management module"
 edition = "2024"
 keywords = ["hypervisor", "address-space"]
 license = "Apache-2.0 OR MIT"
-name = "axaddrspace"
+name = "axaddrspace-ng"
 repository = "https://github.com/arceos-hypervisor/axaddrspace"
 version = "0.1.0"
 
