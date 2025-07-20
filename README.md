@@ -1,14 +1,14 @@
-# axaddrspace
+# axaddrspace-ng
 
 **ArceOS-Hypervisor guest VM address space management module**
 
-[![CI](https://github.com/arceos-hypervisor/axaddrspace/actions/workflows/ci.yml/badge.svg)](https://github.com/arceos-hypervisor/axaddrspace/actions/workflows/ci.yml)
-[![Crates.io](https://img.shields.io/crates/v/axaddrspace)](https://crates.io/crates/axaddrspace)
+[![CI](https://github.com/chyyuu/axaddrspace-ng/actions/workflows/ci.yml/badge.svg)](https://github.com/chyyuu/axaddrspace-ng/actions/workflows/ci.yml)
+[![Crates.io](https://img.shields.io/crates/v/axaddrspace-ng)](https://crates.io/crates/axaddrspace-ng)
 [![License](https://img.shields.io/badge/license-Apache%202.0%20OR%20MIT-blue)](LICENSE)
 
 ## Overview
 
-`axaddrspace` is a core component of the [ArceOS-Hypervisor](https://github.com/arceos-hypervisor/) project that provides guest virtual machine address space management capabilities. The crate implements nested page tables and address translation for hypervisor environments, supporting multiple architectures including x86_64, AArch64, and RISC-V.
+`axaddrspace-ng` is a core component of the [ArceOS-Hypervisor](https://github.com/arceos-hypervisor/) project that provides guest virtual machine address space management capabilities. The crate implements nested page tables and address translation for hypervisor environments, supporting multiple architectures including x86_64, AArch64, and RISC-V.
 
 ## Features
 
@@ -64,13 +64,13 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-axaddrspace = "0.1.0"
+axaddrspace-ng = "0.2.0"
 ```
 
 ### Basic Example
 
 ```rust
-use axaddrspace::{AddrSpace, MappingFlags, GuestPhysAddr};
+use axaddrspace-ng::{AddrSpace, MappingFlags, GuestPhysAddr};
 use page_table_multiarch::PagingHandler;
 
 // Create a new address space
@@ -99,7 +99,7 @@ let fault_handled = addr_space.handle_page_fault(
 Implement the `AxMmHal` trait for your platform:
 
 ```rust
-use axaddrspace::{AxMmHal, HostPhysAddr, HostVirtAddr};
+use axaddrspace-ng::{AxMmHal, HostPhysAddr, HostVirtAddr};
 
 struct MyHal;
 
@@ -135,5 +135,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Repository
 
-- [GitHub Repository](https://github.com/arceos-hypervisor/axaddrspace)
+- [GitHub Repository](https://github.com/chyyuu/axaddrspace-ng)
 - [ArceOS-Hypervisor Project](https://github.com/arceos-hypervisor/)
